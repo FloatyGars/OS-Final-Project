@@ -1,0 +1,114 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f7f9fc;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  padding: 25px 30px;
+  max-width: 720px;
+  width: 100%;
+}
+h1 {
+  text-align: center;
+  color: #4a90e2;
+  margin-bottom: 25px;
+}
+.input-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+input[type="number"], input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  flex: 1 1 150px;
+  min-width: 150px;
+}
+button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  flex: 0 0 auto;
+}
+button:hover {
+  background-color: #357ABD;
+}
+.simulation {
+  margin-top: 10px;
+}
+.step {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+.rooms {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 15px;
+}
+.room {
+  width: 65px;
+  height: 65px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  user-select: none;
+  border: 2px solid transparent;
+  background-color: #eee;
+  color: #333;
+}
+/* HIT room (green) */
+.room.hit {
+  background-color: #82dd55;
+  border-color: #4caf50;
+  color: #1b5e20;
+}
+/* MISS room (red) */
+.room.miss {
+  background-color: #f28b82;
+  border-color: #e23636;
+  color: #7f1a1a;
+}
+/* Active room highlight */
+.room.active {
+  box-shadow: 0 0 12px 3px #4a90e2;
+}
+/* Arrow pointing to active room */
+.room.active::after {
+  content: "↓";
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 40px;
+  color: #131936;
+  user-select: none;
+}
+.summary {
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 25px;
+  color: #222;
+}

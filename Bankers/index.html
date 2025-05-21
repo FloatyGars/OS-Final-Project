@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Medical Equipment - Banker's Algorithm</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h2>Medical Equipment Banker's Algorithm Simulation</h2>
+
+      <div class="input-row">
+  <div class="form-group">
+    <label>Number of Doctors:</label>
+    <input type="number" id="doctorCount" min="1" value="3">
+  </div>
+
+  <div class="form-group">
+    <label>Number of Tools:</label>
+    <input type="number" id="toolCount" min="1" value="3">
+  </div>
+
+  <div class="form-group button-wrapper">
+    <button class="primary-btn" onclick="generateTables()">Generate Tables</button>
+  </div>
+</div>
+
+
+      <div id="tablesSection" class="tables"></div>
+
+      <div class="form-group">
+        <label>Available Tools:</label>
+        <div id="availableInputs" class="available"></div>
+      </div>
+
+      <button class="simulate-btn" onclick="runBankers()">Simulate</button>
+
+      <div id="resultSection" class="result"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

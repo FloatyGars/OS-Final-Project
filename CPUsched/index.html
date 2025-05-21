@@ -1,0 +1,54 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Call Center Support Simulation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>Call Center Support Simulation</h1>
+    <div class="time-quantum-box">⏱ Time Quantum: <span id="quantumDisplay">15</span> units</div>
+
+    <form id="processForm" class="card">
+      <input id="name" placeholder="Caller Name" required />
+      <input type="number" id="burst" placeholder="Call Time (min)" required min="1" />
+      <button type="submit">Add Process</button>
+    </form>
+
+    <div class="card">
+      <h2>Caller Queue</h2>
+      <table id="queueList" class="queue-table">
+        <thead>
+          <tr>
+            <th>Caller Name</th>
+            <th>Call Time (min)</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <button class="simulate-btn" onclick="simulate()">Run Simulation</button>
+
+    <div class="card">
+      <h2>Gantt Chart</h2>
+      <div id="ganttChart" class="gantt-container"></div>
+    </div>
+
+    <div class="card">
+      <h2>Metrics</h2>
+      <p id="avgWaitingTime"></p>
+      <p id="avgTurnaroundTime"></p>
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+
+</html>

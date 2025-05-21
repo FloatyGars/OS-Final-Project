@@ -1,0 +1,193 @@
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f6fa;
+    color: #333;
+    padding: 20px;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: auto;
+  }
+
+  h1,
+  h2 {
+    text-align: center;
+    margin-bottom: 5px;
+    color:#2b6777
+  }
+
+  .card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+  }
+
+  form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    flex: 1 1 150px;
+  }
+
+  button {
+    background-color: #0FA4Af;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #024950;
+  }
+
+  .simulate-btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #0FA4Af;
+  }
+
+  .simulate-btn:hover {
+    background-color: #024950;
+  }
+
+  #queueList li {
+    background: #e9f5ff;
+    border: 1px solid #90caf9;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    list-style: none;
+  }
+
+  /* Gantt Chart Styling */
+  #ganttChart {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 0;
+    margin-top: 20px;
+    position: relative;
+    overflow-x: auto;
+    padding-bottom: 30px;
+    /* make room for time labels */
+  }
+
+  .gantt-block {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    padding: 10px 5px;
+    min-width: 60px;
+    position: relative;
+    font-weight: bold;
+    margin-right: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .gantt-block .label {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .gantt-block .burst-time {
+    font-size: 12px;
+    margin-top: 4px;
+  }
+
+  .gantt-block .time-labels {
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #333;
+  }
+
+  /* Remove trailing empty block border */
+  .gantt-block.final {
+    background: transparent;
+    color: transparent;
+    border: none;
+    min-width: 20px;
+    padding: 0;
+  }
+
+  /* Arrow styling between blocks */
+  .arrow-between {
+    font-size: 24px;
+    margin:  2px;
+    color: #17252A;
+    transform: translateY(-4px);
+    /* adjust vertically */
+  }
+
+  .time-quantum-box {
+    color: #003135;
+    border-radius: 6px;
+    padding: 10px;
+    margin: 1px;
+    font-weight: bold;
+    text-align: center;
+
+  }
+  .queue-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  .queue-table th, .queue-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .queue-table thead {
+    background-color: #f0f0f0;
+    font-weight: bold;
+  }
+  .remove-btn {
+    background-color: #ff746c;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+  }
+
+  .remove-btn:hover {
+    background-color: #d32f2f;
+  }
+

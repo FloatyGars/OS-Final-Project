@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title> Patient Checkup Simulation </title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="card">
+  <h1>Patient Checkup Simulation</h1>
+
+  <div class="input-section">
+    <input type="number" id="roomCount" placeholder="Number of Consultation Rooms" min="1" />
+    <input type="text" id="patientSequence" placeholder="Patient sequence (e.g. A,B,C,A,D,E)" />
+    <button onclick="runSimulation()">Simulate</button>
+  </div>
+
+  <div class="simulation" id="simulationOutput"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
